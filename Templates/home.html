@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+{% load staticfiles %}
+{% block styles %}
+    <style>
+        body {
+            background: url("{% static 'img/space.jpg' %}") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .jumbotron h1 {
+            font-weight: 100;
+        }
+
+        .jumbotron p {
+            font-weight: 100;
+            font-size: 20px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+    <div class="jumbotron" style="background-color: white">
+        <p class="container">
+        <h1 class="display-3">Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a
+            jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+            unique.</p>
+        <p><a class="btn btn-default btn-lg btn-block" href="#signup" role="button">Learn more &raquo;</a></p>
+        <div class="col-sm-5">
+            <img src="{% static 'img/Operator-koll-centra-ap8.png' %}" class="img-fluid"/>
+        </div>
+    </div>
+    <hr/>
+    <div class="container" style="text-align: center; color: white" id="signup">
+        <div class="col-sm-6 col-sm-offset-3">
+        <i class="fa fa-unlock fa-5x"></i>
+            <h1>Стассс</h1>
+            <form class="form-horizontal" method="post" , action="">{% csrf_token %}
+                {#            {{ form.as_p }}#}
+                <div class="input-group form-group-lg">
+                    {% if form.email.errors %}
+                        {% for err in form.email.errors %}
+                            <div class="alert alert-danger" role="alert">Email si required</div>
+                        {% endfor %}
+                    {% endif %}
+                    {#                    {{ form.email.errors }}#}
+                    <div class="input-group">
+                        <input class="form-control" type="email" name="email" placeholder="Стас, введи свою почту..."/>
+                        <span class="input-group-btn">
+                        <input type="submit" value="Join" class="btn btn-primary btn-lg">
+                    </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row" style="text-align: center; background-color: white">
+    sdfdf
+    </div>
+    <hr/>
+    <div class="row" style="text-align: center; background-color: white">
+    sdfdf
+    </div>
+{% endblock %}
