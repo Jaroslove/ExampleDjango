@@ -26,10 +26,8 @@
 
     <div class="jumbotron" style="background-color: white">
         <p class="container">
-        <h1 class="display-3">Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-            jumbotron and three supporting pieces of content. Use it as a starting point to create something more
-            unique.</p>
+        <h1 class="display-3">А какой был КАЦЕ!?</h1>
+        <p>Ты помнишь Стас?, как ты сидел и в микрофон чегото говорил?</p>
         <p><a class="btn btn-default btn-lg btn-block" href="#signup" role="button">Learn more &raquo;</a></p>
         <div class="col-sm-5">
             <img src="{% static 'img/Operator-koll-centra-ap8.png' %}" class="img-fluid"/>
@@ -38,7 +36,7 @@
     <hr/>
     <div class="container" style="text-align: center; color: white" id="signup">
         <div class="col-sm-6 col-sm-offset-3">
-        <i class="fa fa-unlock fa-5x"></i>
+            <i class="fa fa-unlock fa-5x"></i>
             <h1>Стассс</h1>
             <form class="form-horizontal" method="post" , action="">{% csrf_token %}
                 {#            {{ form.as_p }}#}
@@ -52,18 +50,29 @@
                     <div class="input-group">
                         <input class="form-control" type="email" name="email" placeholder="Стас, введи свою почту..."/>
                         <span class="input-group-btn">
-                        <input type="submit" value="Join" class="btn btn-primary btn-lg">
+                        <input type="submit" value="Отправить" class="btn btn-primary btn-lg">
                     </span>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <br/>
     <div class="row" style="text-align: center; background-color: white">
-    sdfdf
+        <br/>
+        <div class="mx-auto" style="width: 200px;">
+            <br/>
+            <br/>
+            Nothing to show
+        </div>
+        <br/>
     </div>
-    <hr/>
+    <br/>
     <div class="row" style="text-align: center; background-color: white">
-    sdfdf
+        <div class="mx-auto" style="width: 200px;">
+            <br/>
+            <br/>
+            Nothing to show
+        </div>
     </div>
 {% endblock %}
